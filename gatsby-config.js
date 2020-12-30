@@ -8,7 +8,6 @@ if (process.env.NODE_ENV === "development") {
   require("dotenv").config();
 }
 module.exports = {
-  /* Your site config here */
   plugins: [
     {
       resolve: `gatsby-plugin-manifest`,
