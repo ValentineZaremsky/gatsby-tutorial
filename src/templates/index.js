@@ -4,6 +4,8 @@ import { Helmet } from "react-helmet";
 
 import Layout from "../components/layout";
 
+const siteName = `Gatsby`;
+
 export default ({
   data: {
     allContentfulArticle: {
@@ -24,7 +26,7 @@ export default ({
     <Layout>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>{title}</title>
+        <title>{siteName} | {title}</title>
       </Helmet>
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
