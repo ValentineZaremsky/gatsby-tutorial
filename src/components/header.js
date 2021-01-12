@@ -16,7 +16,7 @@
   `;
 
   const Logo = styled.img`
-    border-radius: 50%;
+    border-radius: 20%;
     height: 100%;
   `;
   const logoLink = `height: 100%;`;
@@ -44,10 +44,10 @@
         }
       }) => (
         <Header>
-          That is header
           <Link to="/" css={logoLink}>
             <Logo src={publicURL} alt="logo" />
           </Link>
+          That is header
         </Header>
       )}
     />
