@@ -8,7 +8,7 @@
     width: 100%;
     height: 3em;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     background-color: ${colors.main};
     color: ${colors.textSecond};
@@ -47,7 +47,7 @@
           <Link to="/" css={logoLink}>
             <Logo src={publicURL} alt="logo" />
           </Link>
-          That is header
+          <strong style={{ margin: `0.5rem` }}>Andromeda</strong>
         </Header>
       )}
     />
