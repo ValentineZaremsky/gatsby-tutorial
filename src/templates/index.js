@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 
 import Layout from "../components/layout";
 
-const siteName = `Gatsby`;
+const siteName = `Andromeda`;
 
 export default ({
   data: {
