@@ -12,11 +12,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `GatsbyJS translated tutorial`,
-        short_name: `GatsbyJS tutorial`,
+        name: `Andromeda space blog`,
+        short_name: `Andromeda`,
         start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
+        background_color: `#feeeee`,
+        theme_color: `#3d3d99`,
         display: `standalone`,
         icon: `src/images/favicon.ico`,
         include_favicon: true

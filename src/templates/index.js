@@ -4,7 +4,11 @@ import { Helmet } from "react-helmet";
 
 import Layout from "../components/layout";
 
-const siteName = `Andromeda`;
+const siteName = "Andromeda";
+
+const createFullPostMarkup = (title, html) => {
+  return { __html: `<h1>` + title + `</h1>` + html }
+}
 
 export default ({
   data: {
@@ -28,7 +32,7 @@ export default ({
         <meta charSet="utf-8" />
         <title>{siteName} | {title}</title>
       </Helmet>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div dangerouslySetInnerHTML={createFullPostMarkup(title, html)} />
     </Layout>
   );
 };
@@ -39,12 +43,13 @@ export const query = graphql`
       edges {
         node {
           title
-          link
           content {
             childMarkdownRemark {
               html
             }
           }
+          link
+          orderNumber
         }
       }
     }
