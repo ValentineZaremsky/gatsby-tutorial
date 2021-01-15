@@ -3,6 +3,7 @@
   import styled from "styled-components";
 
   import { colors } from "../utils/vars";
+  import { site } from "../utils/site";
 
   const Header = styled.header`
     width: 100%;
@@ -47,7 +48,7 @@
           <Link to="/" css={logoLink}>
             <Logo src={publicURL} alt="logo" />
           </Link>
-          <strong style={{ margin: `0.5rem` }}>Andromeda</strong>
+          <strong style={{ margin: `0.5rem` }}>{site.siteName}</strong>
         </Header>
       )}
     />

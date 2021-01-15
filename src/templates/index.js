@@ -2,9 +2,8 @@ import React from "react";
 import { graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 
+import { site } from "../utils/site";
 import Layout from "../components/layout";
-
-const siteName = "Andromeda";
 
 const createFullPostMarkup = (title, html) => {
   return { __html: `<h1>` + title + `</h1>` + html }
@@ -17,6 +16,7 @@ export default ({
         {
           node: {
             title,
+            description,
             content: {
               childMarkdownRemark: { html }
             }
@@ -30,7 +30,8 @@ export default ({
     <Layout>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>{siteName} | {title}</title>
+        <meta name="description" content={description} />
+        <title>{site.siteName} | {title}</title>
       </Helmet>
       <div dangerouslySetInnerHTML={createFullPostMarkup(title, html)} />
     </Layout>
@@ -43,6 +44,7 @@ export const query = graphql`
       edges {
         node {
           title
+          description
           content {
             childMarkdownRemark {
               html
