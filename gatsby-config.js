@@ -18,8 +18,8 @@ module.exports = {
         background_color: `#feeeee`,
         theme_color: `#3d3d99`,
         display: `standalone`,
-        icon: `src/images/favicon.ico`,
-        include_favicon: true
+        icon: `src/images/logo.png`,
+        include_favicon: false
       }
     },
     `gatsby-plugin-offline`,
