@@ -15,7 +15,7 @@ module.exports = {
         name: `Andromeda space blog`,
         short_name: `Andromeda`,
         start_url: `/`,
-        background_color: `#feeeee`,
+        background_color: `#000000`,
         theme_color: `#3d3d99`,
         display: `standalone`,
         icon: `src/images/logo.png`,
