@@ -2,13 +2,17 @@ import React from "react";
 
 import Header from "./header";
 import Sidebar from "./sidebar";
+import Footer from "./footer";
 
 export default ({ children }) => (
   <>
-    <Header />
-    <div style={{ margin: `0 auto`, padding: `1rem`, maxWidth: 650, backgroundColor: `#fffefd` }}>
+    <div class="container">
+      <Header />
       <Sidebar />
-      {children}
+      <main>
+        {children}
+      </main>
+      <Footer />
     </div>
   </>
 );

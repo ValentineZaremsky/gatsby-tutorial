@@ -4,14 +4,14 @@
 
   import { colors } from "../utils/vars";
 
-  const Sidebar = styled.section`
-    position: fixed;
+  const Sidebar = styled.nav`
+/*    position: fixed;
     left: 0;
     width: 20%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; */
     background-color: ${colors.second};
     color: ${colors.textMain};
   `;

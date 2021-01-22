@@ -1,3 +1,46 @@
 body {
   background-color: #fff5f6;
 }
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+header {
+  grid-column: span 12;
+}
+
+nav {
+  grid-column: span 2;
+}
+
+main {
+  grid-column: 4 / span 6;
+  padding: 1rem;
+}
+
+footer {
+  grid-column: span 12;
+}
+
+
+@media screen and (max-width: 820px) {
+  nav {
+    grid-column: span 4;
+  }
+  main {
+    grid-column: span 8;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  nav {
+    grid-row: 3;
+    grid-column: span 12;
+  }
+  main {
+    grid-column: span 12;
+  }
+}
