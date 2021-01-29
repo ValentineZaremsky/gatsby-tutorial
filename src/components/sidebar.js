@@ -19,7 +19,7 @@
   const navItem = `
     display: flex;
     align-items: center;
-    margin: 0 1em 0 2em;
+    margin: 0 2em 0 2em;
     padding: 0.5em 0;
     border-bottom: 0.05em solid ${colors.main50};
     postion: relative;

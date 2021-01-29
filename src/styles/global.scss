@@ -1,4 +1,5 @@
 body {
+  overflow: hidden;
   background-color: #fffbfc;
   line-height: 1.5;
 }
@@ -18,9 +19,8 @@ footer {
 }
 
 nav {
-  grid-column: span 4;
+  grid-column: span 5;
   padding: 3em 0em;
-  font-size: 0.9rem; /* ?!?!?! */
   line-height: 1.25;
 }
 
@@ -29,6 +29,7 @@ main {
   padding: 3rem 1rem;
   max-width: 50em;
   color: #554477;
+  flex-grow: 1;
 }
 
 main ul li {
@@ -37,12 +38,16 @@ main ul li {
 
 a {
   text-decoration: none;
+}
+
+main a {
   color: #e81c4f;
 }
 
 p:last-child {
   margin-bottom: 0;
 }
+
 
 h1 {
   font-variant: small-caps;
@@ -62,6 +67,7 @@ main del {
   color: #776699;
 }
 
+
 blockquote, code, pre {
   background: #fbeafc;
   border-bottom: 1px solid #ddd8e8;
@@ -79,6 +85,7 @@ blockquote, pre {
   font-style: italic;
 }
 
+
 table {
   background: #fff8ff;
 }
@@ -91,8 +98,20 @@ thead, tfoot {
   background: #fbeafc;
 }
 
+footer {
+  background-color: #110044;
+  color: #fffbfc;
+  padding: 1em;
+}
 
+footer a {
+  color: #fff;
+}
 
+iframe#ytplayer {
+  width: 800px;
+  height: 450px;
+}
 
 @media screen and (max-width: 1280px) {
   nav {
@@ -100,15 +119,27 @@ thead, tfoot {
   }
   main {
     grid-column: span 18;
+    /* max-width: none;  ??????????????????????????????? */
+  }
+
+  iframe#ytplayer {
+    width: 640px;
+    height: 360px;
   }
 }
 
 @media screen and (max-width: 960px) {
   nav {
-    grid-column: span 8;
+    grid-column: span 7;
   }
   main {
-    grid-column: span 16;
+    grid-column: span 17;
+    max-width: none;
+  }
+
+  iframe#ytplayer {
+    width: 400px;
+    height: 225px;
   }
 }
 
@@ -119,5 +150,11 @@ thead, tfoot {
   }
   main {
     grid-column: span 24;
+    max-width: none;
+  }
+
+  iframe#ytplayer {
+    width: 320px;
+    height: 180px;
   }
 }
