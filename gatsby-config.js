@@ -16,7 +16,7 @@ module.exports = {
         short_name: `Andromeda`,
         start_url: `/`,
         background_color: `#000000`,
-        theme_color: `#3d3d99`,
+        theme_color: `#440088`,
         display: `standalone`,
         icon: `src/images/logo.png`,
         include_favicon: false
