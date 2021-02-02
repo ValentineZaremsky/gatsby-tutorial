@@ -20,8 +20,6 @@ footer {
 
 nav {
   grid-column: span 5;
-  padding: 3em 0em;
-  line-height: 1.25;
 }
 
 main {
@@ -98,20 +96,18 @@ thead, tfoot {
   background: #fbeafc;
 }
 
-footer {
-  background-color: #110044;
-  color: #fffbfc;
-  padding: 1em;
+main {
+  --body-ratio: calc(100vw * 16 / 24);
 }
 
-footer a {
-  color: #fff;
+.video {
+  --aspect-ratio: calc(var(--height) / var(--width));
+  --height-with-units: calc(var(--height) * 1px);
+  max-width: 100%;
+  // height: Min(calc(100vw * var(--aspect-ratio)), var(--height-with-units));
+  height: Min(calc(var(--body-ratio) * var(--aspect-ratio)), var(--height-with-units));
 }
 
-iframe#ytplayer {
-  width: 800px;
-  height: 450px;
-}
 
 @media screen and (max-width: 1280px) {
   nav {
@@ -119,12 +115,7 @@ iframe#ytplayer {
   }
   main {
     grid-column: span 18;
-    /* max-width: none;  ??????????????????????????????? */
-  }
-
-  iframe#ytplayer {
-    width: 640px;
-    height: 360px;
+    --body-ratio: calc(100vw * 18 / 24);
   }
 }
 
@@ -133,13 +124,9 @@ iframe#ytplayer {
     grid-column: span 7;
   }
   main {
-    grid-column: span 17;
     max-width: none;
-  }
-
-  iframe#ytplayer {
-    width: 400px;
-    height: 225px;
+    grid-column: span 17;
+    --body-ratio: calc((100vw - 4rem) * 17 / 24);
   }
 }
 
@@ -149,12 +136,8 @@ iframe#ytplayer {
     grid-column: span 24;
   }
   main {
-    grid-column: span 24;
     max-width: none;
-  }
-
-  iframe#ytplayer {
-    width: 320px;
-    height: 180px;
+    grid-column: span 24;
+    --body-ratio: calc((100vw - 4rem) * 24 / 24);
   }
 }

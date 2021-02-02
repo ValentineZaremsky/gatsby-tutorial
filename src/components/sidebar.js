@@ -12,6 +12,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center; */
+    padding: 3em 0em;
+    line-height: 1.25;
     background-color: ${colors.second};
     color: ${colors.textMain};
   `;

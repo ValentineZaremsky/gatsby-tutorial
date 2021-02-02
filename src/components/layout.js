@@ -6,7 +6,7 @@ import Footer from "./footer";
 
 export default ({ children }) => (
   <>
-    <div class="container">
+    <div className="container">
       <Header />
       <Sidebar />
       <main>
