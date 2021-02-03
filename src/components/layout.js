@@ -8,10 +8,12 @@ export default ({ children }) => (
   <>
     <div className="container">
       <Header />
-      <Sidebar />
-      <main>
-        {children}
-      </main>
+      <div className="middle">
+        <Sidebar />
+        <main>
+          {children}
+        </main>
+      </div>
       <Footer />
     </div>
   </>
