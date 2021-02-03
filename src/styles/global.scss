@@ -1,7 +1,11 @@
 body {
   overflow: hidden;
-  background-color: #fffbfc;
+  background-color: #fffbff;
   line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
@@ -13,11 +17,9 @@ body {
 
 .middle {
   flex-grow: 1;
-  // align-self: flex-start;
   display: grid;
   grid-template-columns: repeat(24, 1fr);
 }
-
 
 nav {
   grid-column: span 5;
@@ -25,80 +27,8 @@ nav {
 
 main {
   grid-column: 7 / span 16;
-  padding: 3rem 1rem;
-  max-width: 50em;
-  color: #554477;
   display: flex;
   flex-direction: column;
-}
-
-main ul li {
-  margin-bottom: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-main a {
-  color: #e81c4f;
-}
-
-p:last-child {
-  margin-bottom: 0;
-}
-
-
-h1 {
-  font-variant: small-caps;
-  font-size: 2.5rem;
-}
-
-h2, h3, h4, h5, h6 {
-  margin-top: 1.5rem;
-  padding-top: 1em;
-}
-
-h1, h2, h3, h4, h5, h6, main strong, main em, main th, tfoot td {
-  color: #332255;
-}
-
-main del {
-  color: #776699;
-}
-
-
-blockquote, code, pre {
-  background: #fbeafc;
-  border-bottom: 1px solid #ddd8e8;
-  color: #220066;
-}
-
-code {
-  padding: 2px 4px;
-  vertical-align: text-bottom;
-}
-
-blockquote, pre {
-  padding: 1em;
-  border-left: 2px solid #408;
-  font-style: italic;
-}
-
-
-table {
-  background: #fff8ff;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #fff6ff;
-}
-
-thead, tfoot {
-  background: #fbeafc;
-}
-
-main {
   --body-ratio: calc(100vw * 16 / 24);
 }
 
@@ -106,13 +36,7 @@ main {
   --aspect-ratio: calc(var(--height) / var(--width));
   --height-with-units: calc(var(--height) * 1px);
   max-width: 100%;
-  // height: Min(calc(100vw * var(--aspect-ratio)), var(--height-with-units));
   height: Min(calc(var(--body-ratio) * var(--aspect-ratio)), var(--height-with-units));
-}
-
-.the-end {
-  text-align: center;
-  font-size: 2.5rem;
 }
 
 

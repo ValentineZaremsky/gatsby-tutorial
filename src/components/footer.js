@@ -2,6 +2,7 @@
   import { Link } from "gatsby";
   import styled from "styled-components";
 
+  import { colors } from "../utils/vars";
   import { site } from "../utils/site";
 
   const Footer = styled.footer`
@@ -10,12 +11,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #220044;
-    color: #ddccdd;
+    background-color: ${colors.textMain};
+    color: ${colors.light};
     padding: 1em;
 
     a {
-      color: #fff;
+      color: ${colors.textSecond};
     }
 
     .contacts {
@@ -24,14 +25,14 @@
       flex-wrap: wrap;
       justify-content: start;
       padding: 0.5em;
-    }
 
-    .contacts div {
-      margin: 0.5em 2em;
-    }
+      & div {
+        margin: 0.5em 2em;
+      }
 
-    .contacts p {
-      margin: 0em;
+      & p {
+        margin: 0em;
+      }
     }
 
     .copyright {

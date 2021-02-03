@@ -2,6 +2,7 @@ import React from "react";
 
 import Header from "./header";
 import Sidebar from "./sidebar";
+import Main from "./main";
 import Footer from "./footer";
 
 export default ({ children }) => (
@@ -10,9 +11,9 @@ export default ({ children }) => (
       <Header />
       <div className="middle">
         <Sidebar />
-        <main>
+        <Main>
           {children}
-        </main>
+        </Main>
       </div>
       <Footer />
     </div>

@@ -5,13 +5,6 @@
   import { colors } from "../utils/vars";
 
   const Sidebar = styled.nav`
-/*    position: fixed;
-    left: 0;
-    width: 20%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; */
     padding: 3em 0em;
     line-height: 1.25;
     background-color: ${colors.second};
@@ -23,9 +16,9 @@
     align-items: center;
     margin: 0 2em 0 2em;
     padding: 0.5em 0;
-    border-bottom: 0.05em solid ${colors.main50};
+    border-bottom: 0.0625em solid ${colors.main50};
     postion: relative;
-    color: ${colors.textBody};
+    color: ${colors.textMain};
     text-decoration: none;
 
     &:before {
