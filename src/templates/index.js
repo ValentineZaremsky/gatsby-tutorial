@@ -19,7 +19,17 @@ export default ({
             description,
             content: {
               childMarkdownRemark: { html }
-            }
+            },
+            link
+          }
+        }
+      ]
+    },
+    allFile: {
+      edges: [
+        {
+          node: {
+            publicURL
           }
         }
       ]
@@ -31,6 +41,15 @@ export default ({
       <Helmet>
         <meta charSet="utf-8" />
         <meta name="description" content={description} />
+        <meta property="og:url" content={"https://" + site.siteURL + link} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:site_name" content={site.siteURL} />
+        <meta property="og:image" content={"https://" + site.siteURL + publicURL} />
+        <meta name="twitter:site" content={site.siteURL} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
         <title>{site.siteName} | {title}</title>
       </Helmet>
       <div dangerouslySetInnerHTML={createFullPostMarkup(title, html)} />
@@ -52,6 +71,13 @@ export const query = graphql`
           }
           link
           orderNumber
+        }
+      }
+    }
+    allFile(filter: {name: {eq: "logo"}}) {
+      edges {
+        node {
+          publicURL
         }
       }
     }

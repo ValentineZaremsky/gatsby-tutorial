@@ -1,6 +1,6 @@
 export const site = {
   siteName: "Andromeda",
-  siteURL: "www.andromeda.com",
+  siteURL: "andromeda-blog.netlify.app",
   siteEmail: "info@andromeda.com",
-  siteTel: "+380 99 888 77 66"
+  siteTel: "+380 66 777 88 99"
 };

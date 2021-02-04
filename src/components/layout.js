@@ -3,6 +3,7 @@ import React from "react";
 import Header from "./header";
 import Sidebar from "./sidebar";
 import Main from "./main";
+import Social from "./social";
 import Footer from "./footer";
 
 export default ({ children }) => (
@@ -13,6 +14,7 @@ export default ({ children }) => (
         <Sidebar />
         <Main>
           {children}
+          <Social />
         </Main>
       </div>
       <Footer />
