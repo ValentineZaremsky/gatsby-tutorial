@@ -48,8 +48,9 @@
           <p><a href={"tel:"+site.siteTel}>{site.siteTel}</a></p>
         </div>
         <div className="address">
-          <p><a href="https://goo.gl/maps/fgtLEQoDsQjTDTfb7" rel="noreferrer" target="_blank">15 Vasilieva</a>,</p>
-          <p>Kamyanets-Podilsky, 32300, Ukraine</p>
+          <p><a href={site.siteGeo} rel="noreferrer" target="_blank">{site.siteAddr1}</a></p>
+          <p>{site.siteAddr2}</p>
+          <p>{site.siteAddr3}</p>
         </div>
       </div>
       <div className="copyright">
