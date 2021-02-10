@@ -20,14 +20,22 @@
     }
 
     .contacts {
+      width: 100%;
       display: flex;
-      flex-direction: row;
       flex-wrap: wrap;
+      flex-direction: column;
       justify-content: start;
+      align-content: center;
+      max-height: 5.5em;
+
+      @media screen and (max-width: 640px) {
+        max-height: 100%;
+      }
 
       & div {
         position: relative;
         margin: 0.5em 1.5em 0.5em 1.5em;
+        flex: 0 1 content;
       }
 
       & div svg {
