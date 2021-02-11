@@ -6,7 +6,7 @@ import { site } from "../utils/site";
 import Layout from "../components/layout";
 
 const createFullPostMarkup = (title, html) => {
-  return { __html: `<h1>` + title + `</h1>` + html }
+  return { __html: `<h1>` + title + `</h1>` + html}
 }
 
 export default ({
@@ -20,16 +20,12 @@ export default ({
             content: {
               childMarkdownRemark: { html }
             },
+            banner: {
+              file: {
+                url
+              }
+            },
             link
-          }
-        }
-      ]
-    },
-    allFile: {
-      edges: [
-        {
-          node: {
-            publicURL
           }
         }
       ]
@@ -46,7 +42,7 @@ export default ({
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:site_name" content={site.siteURL} />
-        <meta property="og:image" content={"https://" + site.siteURL + publicURL} />
+        <meta property="og:image" content={"https:" + url} />
         <meta name="twitter:site" content={site.siteURL} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
@@ -69,15 +65,13 @@ export const query = graphql`
               html
             }
           }
+          banner {
+            file {
+              url
+            }
+          }
           link
           orderNumber
-        }
-      }
-    }
-    allFile(filter: {name: {eq: "logo"}}) {
-      edges {
-        node {
-          publicURL
         }
       }
     }
