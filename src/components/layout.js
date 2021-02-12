@@ -14,6 +14,7 @@ export default ({ children }) => (
       <div className="middle">
         <Sidebar />
         <Main>
+          <Title />
           {children}
           <Social />
         </Main>

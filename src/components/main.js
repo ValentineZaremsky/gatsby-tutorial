@@ -25,17 +25,12 @@
       font-size: 2.5rem;
     }
 
-    h1 {
-      font-variant: small-caps;
-      font-size: 2.5rem;
-    }
-
     h2, h3, h4, h5, h6 {
       margin-top: 1.5rem;
       padding-top: 1em;
     }
 
-    h1, h2, h3, h4, h5, h6,
+    h2, h3, h4, h5, h6,
     & strong, & em, & th, tfoot td {
       color: ${colors.textMain};
     }
@@ -48,13 +43,20 @@
 
     code {
       padding: 0.125em 0.25em;
-      vertical-align: text-bottom;
+      vertical-align: middle;
     }
 
     blockquote, pre {
       padding: 1em;
-      border-left: 0.125em solid ${colors.main};
+      border-left: 0.125rem solid ${colors.main};
+    }
+
+    blockquote {
       font-style: italic;
+    }
+
+    pre {
+      line-height: 1.2em;
     }
 
     table {
