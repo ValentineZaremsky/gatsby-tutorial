@@ -1,11 +1,11 @@
-  import React from "react";
-  import { StaticQuery, graphql } from "gatsby";
-  import styled from "styled-components";
-
-  const Title = styled.section`
-    width: 100%;
-    color: red;
-  `;
+  // import React from "react";
+  // import { StaticQuery, graphql } from "gatsby";
+  // import styled from "styled-components";
+  //
+  // const Title = styled.section`
+  //   width: 100%;
+  //   color: red;
+  // `;
 
 
 

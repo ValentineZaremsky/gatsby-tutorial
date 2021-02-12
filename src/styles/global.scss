@@ -17,10 +17,10 @@ a {
 }
 
 .middle {
-  // border: 2px solid #F00;
   flex: 1 1 auto;
   display: grid;
   grid-template-columns: repeat(24, 1fr);
+  grid-template-rows: 100%;
 }
 
 nav {
