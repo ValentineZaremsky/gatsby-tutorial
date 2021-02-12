@@ -43,7 +43,7 @@
 
     code {
       padding: 0.125em 0.25em;
-      vertical-align: middle;
+      vertical-align: top;
     }
 
     blockquote, pre {
