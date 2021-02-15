@@ -1,14 +1,16 @@
 import React from "react";
 
+import Icons from "./icons";
 import Header from "./header";
 import Sidebar from "./sidebar";
 import Main from "./main";
 import Title from "./title";
-import Social from "./social";
+import Share from "./share";
 import Footer from "./footer";
 
 export default ({ children }) => (
   <>
+    <Icons />
     <div className="container">
       <Header />
       <div className="middle">
@@ -16,7 +18,7 @@ export default ({ children }) => (
         <Main>
           <Title />
           {children}
-          <Social />
+          <Share />
         </Main>
       </div>
       <Footer />
