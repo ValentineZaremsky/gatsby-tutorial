@@ -5,36 +5,35 @@
   import { colors } from "../utils/vars";
   import { site } from "../utils/site";
 
-  const Title = styled.section`
-    width: 100%;
-    color: ${colors.textSecond};
+  const Author = styled.section`
+    display: flex;
+    justify-content: end;
+    color: ${colors.textBody};
+    font-style: italic;
+    font-size: 0.9rem;
 
-    div {
-      display: flex;
-      justify-content: start;
-      align-items: end;
-      height: 300px;
-      background-image: url(${site.artBanner});
+    & strong, & em {
+      color: ${colors.textBody};
     }
 
-    h1 {
-      font-variant: small-caps;
-      font-size: 2.5rem;
-      margin: 2.5rem;
+    & div {
+      max-width: 20em;
+    }
+
+    & p {
+      padding: 0;
+      margin: 0;
     }
   `;
 
+
   export default () => (
     <>
-      <Title>
-        <div>
-          <h1>{site.siteName}</h1>
-        </div>
-      </Title>
+      <Author>
+        <div dangerouslySetInnerHTML={{ __html: site.artAuthor }} />
+      </Author>
     </>
   );
-
-
 
 
   // export default () => (
@@ -44,7 +43,11 @@
   //         allContentfulArticle(filter: { link: { eq: $slug } }) {
   //           edges {
   //             node {
-  //               title
+  //               author {
+  //                 childMarkdownRemark {
+  //                   html
+  //                 }
+  //               }
   //               link
   //             }
   //           }
@@ -56,16 +59,18 @@
   //         edges: [
   //           {
   //             node: {
-  //               title,
+  //               author: {
+  //                 childMarkdownRemark: {  html }
+  //               },
   //               link
   //             }
   //           }
   //         ]
   //       }
   //     }) => (
-  //       <Title>
-  //         <h1>{title}</h1>
-  //       </Title>
+  //       <Author>
+  //         <div dangerouslySetInnerHTML={{ __html: html }} />
+  //       </Author>
   //     )}
   //   />
   // );

@@ -65,6 +65,11 @@ export const query = graphql`
               html
             }
           }
+          author {
+            childMarkdownRemark {
+              html
+            }
+          }
           banner {
             file {
               url

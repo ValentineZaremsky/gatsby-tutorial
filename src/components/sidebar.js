@@ -17,7 +17,6 @@
     margin: 0 2em 0 2em;
     padding: 0.5em 0;
     border-bottom: 0.0625em solid ${colors.main50};
-    postion: relative;
     color: ${colors.textMain};
     text-decoration: none;
 

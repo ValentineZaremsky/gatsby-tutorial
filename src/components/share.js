@@ -2,7 +2,7 @@
   import styled from "styled-components";
 
   import { colors } from "../utils/vars";
-  import { site } from "../utils/site";
+  // import { site } from "../utils/site";
 
   const Share = styled.section`
     margin: 1.5rem 2rem 0 2rem;

@@ -12,5 +12,8 @@ export const site = {
   siteTelegram:  "t.me/andromeda",
   siteAddr1:     "15 Vasilieva,",
   siteAddr2:     "Kamyanets-Podilsky,",
-  siteAddr3:     "32300, Ukraine"
+  siteAddr3:     "32300, Ukraine",
+
+  artBanner: "https://images.ctfassets.net/gioiz80bo502/7LcF0XIMP6LZ3OdMoazA00/220b8f3f5a192676ca8b8364be4b449f/federico-beccari-L8126OwlroY-1920x1080.jpg",
+  artAuthor: "<p>Dr. <strong>Leonard Hofstadter</strong></p><p>senior experimental physicist at the California Institute of Technology</p><p><a href=\"https://bigbangtheory.fandom.com/wiki/Leonard_Hofstadter\">www.wiki.info/Leonard_Hofstadter</a></p>",
 };
