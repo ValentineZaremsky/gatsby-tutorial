@@ -36,41 +36,42 @@
   );
 
 
-  // export default () => (
-  //   <StaticQuery
-  //     query={graphql`
-  //       query($slug: String!) {
-  //         allContentfulArticle(filter: { link: { eq: $slug } }) {
-  //           edges {
-  //             node {
-  //               author {
-  //                 childMarkdownRemark {
-  //                   html
-  //                 }
-  //               }
-  //               link
-  //             }
+  // export default ({
+  //   data: {
+  //     allContentfulArticle: {
+  //       edges: [
+  //         {
+  //           node: {
+  //             title,
+  //             link
   //           }
   //         }
+  //       ]
+  //     }
+  //   }
+  // }) => {
+  //   return (
+  //     <Author>
+  //       <p>title</p>
+  //       <p>link</p>
+  //     </Author>
+  //   );
+  // };
+  //
+  //
+  // export const query = graphql`
+  //   query($slug: String!) {
+  //     allContentfulArticle(filter: { link: { eq: $slug } }) {
+  //       edges {
+  //         node {
+  //           title
+  //           link
+  //         }
   //       }
-  //     `}
-  //     render={({
-  //       allContentfulArticle: {
-  //         edges: [
-  //           {
-  //             node: {
-  //               author: {
-  //                 childMarkdownRemark: {  html }
-  //               },
-  //               link
-  //             }
-  //           }
-  //         ]
-  //       }
-  //     }) => (
-  //       <Author>
-  //         <div dangerouslySetInnerHTML={{ __html: html }} />
-  //       </Author>
-  //     )}
-  //   />
-  // );
+  //     }
+  //   }
+  // `;
+
+
+
+  // <div dangerouslySetInnerHTML={{ __html: html }} />
