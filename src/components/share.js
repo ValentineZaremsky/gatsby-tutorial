@@ -62,6 +62,7 @@
 
   const url = encodeURIComponent('https://' + site.siteURL + '/' + site.artSlug);
   const title = encodeURIComponent(site.artTitle);
+  const image = encodeURIComponent(site.artBanner);
 
   // console.log('URL:', `https://t.me/share/url?url=${url}`);
   // console.log('Title:', title);
@@ -94,7 +95,7 @@
             </a>
           </div>
           <div className="share messenger">
-            <a href="#" title="Messenger" target="_blank" rel="noreferrer">
+            <a href={`fb-messenger://share/?link=${url}`} title="Messenger" target="_blank" rel="noreferrer">
               <svg><use xlinkHref="#icon-messenger" /></svg>
             </a>
           </div>
@@ -128,7 +129,7 @@
             </a>
           </div>
           <div className="share pinterest">
-            <a href="#" target="_blank" title="Pinterest">
+            <a href={`http://pinterest.com/pin/create/button/?url=${url}&media=${image}&description=${title}`} target="_blank" title="Pinterest">
               <svg><use xlinkHref="#icon-pinterest" /></svg>
             </a>
           </div>
@@ -163,7 +164,7 @@
             </a>
           </div>
           <div className="share tumblr">
-            <a href="#" target="_blank" title="Tumblr">
+            <a href={`http://www.tumblr.com/share?v=3&u=${url}&t=${title}`} target="_blank" title="Tumblr">
               <svg><use xlinkHref="#icon-tumblr" /></svg>
             </a>
           </div>
@@ -194,14 +195,13 @@
 /*
 
 [
-      {
-        title: 'Instagram',
-        href: `https://www.instagram.com/`=${urlInstagram}
-      },
-      {
-        title: 'Viber',
-        href: `https://vb.me/`=${urlViberGroup}
-      },
+      href: `https://www.instagram.com/`=${urlInstagram}
+      https://twitter.com/share?url=[URL]&text=[TITLE]
+      http://www.reddit.com/submit?url=[URL]
+      http://connect.mail.ru/share?url=[URL]&title=[TITLE]&description=[DESC]&imageurl=[IMAGE]
+
+      href=”fb-messenger://share/?link=[URL]
+       send-dialog&app_id=123456789”
 ];
 
 */
