@@ -34,7 +34,7 @@
       height: 1.77rem;
     }
     .facebook a:hover {background: #3b5998;}
-    .instagram a:hover {background: #517fa4;}
+    .twitter a:hover {background: #00aced;}
     .vkontakte a:hover {background: #45668e;}
     .telegram a:hover {background: #249bd7;}
     .messenger a:hover {background: #009bff;}
@@ -44,7 +44,7 @@
 /*
  * Styles
  *
-    .twitter a:hover {background: #00aced;}
+    .instagram a:hover {background: #517fa4;}
     .linkedin a:hover {background: #0e76a8;}
     .pinterest a:hover {background: #c8232c;}
     .whatsapp a:hover {background: #50b154;}
@@ -77,9 +77,9 @@
               <svg><use xlinkHref="#icon-facebook" /></svg>
             </a>
           </div>
-          <div className="share instagram">
-            <a href="#" title="Instagram" target="_blank" rel="noreferrer">
-              <svg><use xlinkHref="#icon-instagram" /></svg>
+          <div className="share twitter">
+            <a href={`https://twitter.com/intent/tweet?text=${title}&url=${url}`} target="_blank" title="Twitter">
+              <svg><use xlinkHref="#icon-twitter" /></svg>
             </a>
           </div>
           <div className="share vkontakte">
@@ -118,9 +118,9 @@
             </a>
           </div>
 
-          <div className="share twitter">
-            <a href={`https://twitter.com/intent/tweet?text=${title}&url=${url}`} target="_blank" title="Twitter">
-              <svg><use xlinkHref="#icon-twitter" /></svg>
+          <div className="share instagram">
+            <a href="#" title="Instagram" target="_blank" rel="noreferrer">
+              <svg><use xlinkHref="#icon-instagram" /></svg>
             </a>
           </div>
           <div className="share linkedin">
@@ -199,9 +199,6 @@
       https://twitter.com/share?url=[URL]&text=[TITLE]
       http://www.reddit.com/submit?url=[URL]
       http://connect.mail.ru/share?url=[URL]&title=[TITLE]&description=[DESC]&imageurl=[IMAGE]
-
-      href=”fb-messenger://share/?link=[URL]
-       send-dialog&app_id=123456789”
-];
+      <a href="https://m.me/[ACCOUNT]">Message us on Facebook</a>;
 
 */
