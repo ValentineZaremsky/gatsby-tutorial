@@ -25,7 +25,8 @@ export default ({
                 url
               }
             },
-            link
+            link,
+            updatedAt
           }
         }
       ]
@@ -38,11 +39,15 @@ export default ({
         <meta charSet="utf-8" />
         <meta name="description" content={description} />
         <meta property="og:url" content={"https://" + site.siteURL + link} />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:site_name" content={site.siteURL} />
         <meta property="og:image" content={"https:" + url} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="article:published_time" content={updatedAt} />
+        <meta property="article:author" content="" />           //  ???
         <meta name="twitter:site" content={site.siteURL} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
@@ -77,6 +82,7 @@ export const query = graphql`
           }
           link
           orderNumber
+          updatedAt
         }
       }
     }

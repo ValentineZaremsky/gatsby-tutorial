@@ -89,7 +89,7 @@
         </div>
         <div>
           <div className="share telegram">
-            <a href={`https://t.me/share/url?url=${url}&text=${title}`} title="Telegram" target="_blank" rel="noreferrer">
+            <a href={`tg://msg?url=${url}&text=${title}`} title="Telegram" target="_blank" rel="noreferrer">
               <svg><use xlinkHref="#icon-telegram" /></svg>
             </a>
           </div>
@@ -111,6 +111,12 @@
 /*
  * Buttons
  *
+          <div className="share telegram">
+            <a href={`https://t.me/share/url?url=${url}&text=${title}`} title="Telegram" target="_blank" rel="noreferrer">
+              <svg><use xlinkHref="#icon-telegram" /></svg>
+            </a>
+          </div>
+
           <div className="share twitter">
             <a href={`https://twitter.com/intent/tweet?text=${title}&url=${url}`} target="_blank" title="Twitter">
               <svg><use xlinkHref="#icon-twitter" /></svg>
@@ -127,7 +133,7 @@
             </a>
           </div>
           <div className="share whatsapp">
-            <a href="#" target="_blank" title="Whatsapp">
+            <a href={`https://api.whatsapp.com/send?text=${url}`} target="_blank" title="Whatsapp">
               <svg><use xlinkHref="#icon-whatsapp" /></svg>
             </a>
           </div>
