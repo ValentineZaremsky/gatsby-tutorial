@@ -8,6 +8,13 @@ if (process.env.NODE_ENV === "development") {
   require("dotenv").config();
 }
 module.exports = {
+  siteMetadata: {
+    title: "Andromeda",
+    description: 'Per aspera ad astra',
+    author: '@andromeda',
+    siteURL: 'https://andromeda-blog.netlify.app',
+    phone: "+380 66 777 88 99",
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-manifest`,

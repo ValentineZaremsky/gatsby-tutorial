@@ -1,6 +1,7 @@
   import React from "react";
   import styled from "styled-components";
 
+  // import useSiteMetadata from '../hooks/use-site-metadata';
   import { colors } from "../utils/vars";
   import { site } from "../utils/site";
 
@@ -78,7 +79,7 @@
             </a>
           </div>
           <div className="share twitter">
-            <a href={`https://twitter.com/intent/tweet?text=${title}&url=${url}`} target="_blank" title="Twitter">
+            <a href={`https://twitter.com/intent/tweet?text=${title}&url=${url}`} title="Twitter" target="_blank" rel="noreferrer">
               <svg><use xlinkHref="#icon-twitter" /></svg>
             </a>
           </div>
