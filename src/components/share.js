@@ -63,7 +63,7 @@
 
   const url = encodeURIComponent('https://' + site.siteURL + '/' + site.artSlug);
   const title = encodeURIComponent(site.artTitle);
-  const image = encodeURIComponent(site.artBanner);
+  // const image = encodeURIComponent(site.artBanner);
 
   // console.log('URL:', `https://t.me/share/url?url=${url}`);
   // console.log('Title:', title);
