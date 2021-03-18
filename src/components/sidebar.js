@@ -5,6 +5,8 @@
   import { colors } from "../utils/vars";
 
   const Sidebar = styled.nav`
+    // position: sticky;
+    // top: 3em;
     padding: 3em 0em;
     line-height: 1.25;
     background-color: ${colors.second};

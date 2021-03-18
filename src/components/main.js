@@ -23,6 +23,24 @@
     & .the-end {
       text-align: center;
       font-size: 2.5rem;
+      overflow: hidden;
+    }
+    .the-end::before, .the-end::after {
+      content: '';
+      background: ${colors.textBody};
+      display: inline-block;
+      height: 0.1rem;
+      position: relative;
+      vertical-align: middle;
+      width: 50%;
+    }
+    .the-end::before {
+      right: 0.5rem;
+      margin-left: -50%;
+    }
+    .the-end::after {
+      left: 0.5rem;
+      margin-right: -50%;
     }
 
     h2, h3, h4, h5, h6 {
