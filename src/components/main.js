@@ -29,7 +29,7 @@
       content: '';
       background: ${colors.textBody};
       display: inline-block;
-      height: 0.1rem;
+      height: 0.05rem;
       position: relative;
       vertical-align: middle;
       width: 50%;
@@ -49,8 +49,37 @@
     }
 
     h2, h3, h4, h5, h6,
-    & strong, & em, & th, tfoot td {
+    & em, & th, tfoot td {
       color: ${colors.textMain};
+    }
+
+    img {
+      margin-bottom: 0;
+    }
+
+    img + em {
+      color: ${colors.textBody};
+      display: block;
+      text-align: center;
+      font-size: 0.9em;
+    }
+
+    figure {
+      display: inline-block;
+      padding-left: .33rem;
+      padding-right: .33rem;
+    }
+
+    figure img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    figcaption {
+      color: ${colors.textBody};
+      text-align: center;
+      font-style: italic;
+      font-size: 0.9em;
     }
 
     blockquote, code, pre {
