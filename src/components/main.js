@@ -5,8 +5,10 @@
 
   const Main = styled.main`
     padding: 3rem 1rem;
-    max-width: 50em;
+    // max-width: 50em;
     color: ${colors.textBody};
+
+    border: 1px solid #666666; // !!
 
     & a {
       color: ${colors.link};
@@ -64,22 +66,69 @@
       font-size: 0.9em;
     }
 
-    figure {
-      display: inline-block;
-      padding-left: .33rem;
-      padding-right: .33rem;
-    }
-
     figure img {
       display: block;
       margin: 0 auto;
     }
 
+    .gallery {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-content: center;
+      flex-wrap: wrap;
+    }
+
+    figure.gallery-item {
+      display: inline-block;
+      max-width: 50%;
+    }
+
+    .gallery-pict {
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      padding: .66rem;
+      margin: 0;
+    }
+
+    .gallery-pict::after,
+    .gallery-pict::before {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      width: 70px;
+      height: 70px;
+      left: -40px;
+      bottom: -40px;
+      transform: rotate(45deg);
+      box-shadow: 0 0 10px rgba(0,0,0,.5);
+      outline: #c2b59d dashed 1px;
+      outline-offset: -3px;
+      background: ${colors.backPage};
+    }
+    .gallery-pict::after {
+      left: auto;
+      right: -40px;
+      top: -40px;
+    }
+
+    .gallery-pict img {
+      display: block;
+      padding: 4px;
+      background: #dad6cf;
+      border: 2px solid #c2b59d;
+    }
+
     figcaption {
+      // position: absolute;
+      // z-index: 3;
       color: ${colors.textBody};
       text-align: center;
       font-style: italic;
       font-size: 0.9em;
+      right: 0;
+      left: 0;
     }
 
     blockquote, code, pre {
